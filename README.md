@@ -48,4 +48,22 @@ The API provides full CRUD (Create, Read, Update, Delete) operations for the use
 
 ## API Endpoints
 
-*(We will fill this section in later, after we build the endpoints.)*
+The API is served at the base URL `http://localhost:3000/api`.
+
+| HTTP Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **CRUD Operations** | | |
+| GET | `/users` | Retrieves a list of all users (Read All). |
+| GET | `/users/:uuid` | Retrieves a single user by their UUID (Read One). |
+| POST | `/users` | Creates and inserts a new user into the database (Create). |
+| PUT | `/users/:uuid` | Updates an existing user based on UUID (Update). |
+| DELETE | `/users/:uuid` | Deletes a user based on UUID (Delete). |
+| **Custom Query Endpoints** | | |
+| GET | `/questions/gender-count` | **Q1:** Returns the total count of male and female users. |
+| GET | `/questions/average-age` | **Q2:** Calculates and returns the average age of all users. |
+| GET | `/questions/common-country` | **Q3:** Identifies and returns the country with the most users. |
+| GET | `/questions/average-age-common-country` | **Q4:** Calculates the average age of users in the most common country. |
+| GET | `/questions/common-firstname` | **Q5:** Identifies and returns the most frequently occurring first name. |
+| GET | `/questions/over-30-count` | **Q6:** Returns the number of users older than 30. |
+| GET | `/questions/france-count` | **Q7:** Returns the total number of users from France. |
+| GET | `/questions/us-users-list` | **Q8:** Returns a list of the full names of all users from the United States. |
