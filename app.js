@@ -16,6 +16,14 @@ mongoose.connect(process.env.MONGO_URI)
     console.error('❌ Error connecting to MongoDB:', err.message);
   });
 
+// --- Import API Routes ---
+const apiRoutes = require('./routes/api.js');
+app.use('/api', apiRoutes);
+
+// --- Basic Route ---
+// A simple "Hello World" route to test the server
+app.get('/', (req, res) => {
+
 // --- Basic Route ---
 app.get('/', (req, res) => {
   res.send('API is running...');
