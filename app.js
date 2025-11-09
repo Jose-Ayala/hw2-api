@@ -21,10 +21,6 @@ const apiRoutes = require('./routes/api.js');
 app.use('/api', apiRoutes);
 
 // --- Basic Route ---
-// A simple "Hello World" route to test the server
-app.get('/', (req, res) => {
-
-// --- Basic Route ---
 app.get('/', (req, res) => {
   res.send('API is running...');
 });

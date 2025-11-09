@@ -21,8 +21,15 @@ router.put('/users/:uuid', controller.updateUser);
 router.delete('/users/:uuid', controller.deleteUser);
 
 
-// --- 8 Questions Routes ---
-// We will add these later
+// Questions Routes
+router.get('/questions/gender-count', controller.getGenderCount);
+router.get('/questions/average-age', controller.getAverageAge);
+router.get('/questions/common-country', controller.getMostCommonCountry);
+router.get('/questions/average-age-common-country', controller.getAverageAgeInCommonCountry);
+router.get('/questions/common-firstname', controller.getMostCommonFirstName);
+router.get('/questions/over-30-count', controller.getUsersOver30);
+router.get('/questions/france-count', controller.getUsersFromFrance);
+router.get('/questions/us-users-list', controller.getUsersFromUS);
 
 // Export the router so our app.js can use it
 module.exports = router;
